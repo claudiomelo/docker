@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>39 Secao 4</title>
+</head>
+<body>
+
+	<h1>
+		Trabalhando com images, criando imagens e dockerfile
+	</h1>
+
+	<hr></hr>
+	<h2>
+		Criar imagens com dockerfile:
+		<br> 
+		https://docs.docker.com/engine/reference/builder/
+	</h2>
+
+	<hr>
+
+	<h3>
+		Executados na aula
+	</h3>
+	
+	<p>
+		<b>docker build -f some-dockerfile</b>
+		<small>(executa um dockerfile, -f é para especificar um arquivo que não tenha o nome default de "Dockerfile")</small>
+	</p>
+
+	<p>
+		Primeiro comando do dockerfile é o FROM, "FROM repo:image"
+	</p>
+
+	<p>
+		<b>docker image build -t imageNameIWant . </b>
+		<small>(criar uma imagem a partir de um docker file, o . significa criar no diretorio atual, onde deve conter o dockerfile)</small>
+	</p>
+
+	<p>
+		OBS: sempre deixar os comandos que precisam ser sempre executados ou que podem mudar com frequencia no fim do dockerfile, boas praticas
+	</p>
+
+</body>
+</html>

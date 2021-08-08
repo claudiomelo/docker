@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>39 Secao 4</title>
+</head>
+<body>
+
+	<h1>
+		Trabalhando com images, docker hub, tags
+	</h1>
+
+	<hr></hr>
+	<h2>
+		Criar tags e subir imagens no dockerhub
+	</h2>
+
+	<hr>
+
+	<h3>
+		Executados na aula
+	</h3>
+	
+	<p>
+		<b>docker image tag --help</b>
+		<small>(help do comando image tag)</small>
+	</p>
+
+	<p>
+		<b>docker image ls</b>
+		<small>(lista as tags de imagens)</small>
+	</p>
+
+	<p>
+		<b>docker pull userName/repository</b>
+		<small>(Fazer pull de uma imagem, nas imagens oficiais não tem o username)</small>
+	</p>
+
+	<p>
+		<b>docker pull userName/repository:tag</b>
+		<small>(Fazer pull de uma imagem pela tag, nas imagens oficiais não tem o username)</small>
+	</p>
+
+	<p>
+		<b>docker image tag sourceImage[:tagOpcional] targetImage[:tagOpcional]</b>
+		<small>(Adicionar uma tag em uma imagem, se não especificar a tag ele coloca a tag latest)</small>
+	</p>
+
+	<p>
+		<b>docker login</b>
+		<small>(Fazer login no docker hub para poder fazer o push)</small>
+	</p>
+
+	<p>
+		<b>docker logout</b>
+		<small>(Fazer logout no dockerhub)</small>
+	</p>
+
+	<p>
+		<b>docker image push imageRepository</b>
+		<small>(Fazer push de uma imagem para o dockerhub)</small>
+	</p>
+
+	<p>
+		<b>cat .docker/config.json</b>
+		<small>(Arquivo com configs do docker)</small>
+	</p>
+</body>
+</html>

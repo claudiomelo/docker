@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>27 Secao 3</title>
+</head>
+<body>
+
+	<h1>
+		Trabalhando com networking dns nos containers (como os container encontram um ao outro)
+	</h1>
+
+	<hr></hr>
+	<h2>
+		Comandos utilizados
+	</h2>
+
+	<p>
+		<b>docker network ls</b>
+		<small>(lista todas as networks criadas)</small>
+	</p>
+
+	
+	<hr>
+
+	<h3>
+		Executados na aula
+	</h3>
+	<p>
+		<b>docker container run -d --name my_nginx --network my_app_network nginx</b>
+		<small>(criando mais um container e adicionando na network acima)</small>
+	</p>
+
+	<p>
+		<b>docker container exec -it my_nginx ping new_nginx</b>
+		<small>(Verificando se o container my_nginx consegue fazer um ping na new_nginx)</small>
+	</p>
+
+</body>
+</html>

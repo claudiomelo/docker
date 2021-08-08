@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>25 Secao 3</title>
+</head>
+<body>
+
+	<h1>
+		Criar 3 containers, apache (hpptd), nginx, mysql, e pegar informações sobre os containers
+	</h1>
+
+	<hr></hr>
+	<h2>
+		Comandos utilizados
+	</h2>
+
+	<p>
+		<b>docker container run -d --name containerName containerImage</b>
+		<small>(cria um container baseado em uma imagem como nome informado e desatachado rodar em background)</small>
+	</p>
+
+	<p>
+		<b>docker container start containerNameOrId</b>
+		<small>(Inicia um container parado)</small>
+	</p>
+
+	<p>
+		<b>docker container top</b>
+		<small>(Exibe lista de processos em um container, é possivel especificar o container que deseja)</small>
+	</p>
+
+	<p>
+		<b>docker container inspect</b>
+		<small>(Detalhes de configuração de um container)</small>
+	</p>
+
+	<p>
+		<b>docker container stats</b>
+		<small>(Estatisticas de performance dos containers)</small>
+	</p>
+
+	<p>
+		<b>docker container ls</b>
+		<small>(Lista os containers criados	)</small>
+	</p>
+
+	<p>
+		<b>docker container stop containerNameOrID</b>
+		<small>(para um container)</small>
+	</p>
+
+	<p>
+		<b>docker container ls -a</b>
+		<small>(Lista os containers menos os que foram parados, * não removidos)</small>
+	</p>
+
+	<p>
+		<b>docker container rm containerNameOrID</b>
+		<small>(remover um container)</small>
+	</p>
+
+	<hr>
+
+	<h3>
+		Criando os 3 containers
+	</h3>
+	<p>
+		<b>docker container run -d --name nginx nginx</b>
+		<small>(Iniciar um container -d=deteached --name dar nome ao container, nginx= imagem do container), caso o container ja exista esse comando da erro, e basta executar: <b>docker run -d nginx </b></small>
+	</p>
+
+	<p>
+		<b>docker container run -d --name httpd httpd</b>
+		<small>(Iniciar um container -d=deteached --name dar nome ao container, httpd= imagem do container), caso o container ja exista esse comando da erro, e basta executar: <b>docker run -d httpd </b></small>
+	</p>
+
+	<p>
+		<b>docker container run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=true mysql</b>
+		<small>(Iniciar um container -d=deteached --name dar nome ao container, -e= variaveis de ambiente que podemos passar de acordo com a imagem utilizada, nesse caso setados que o mysql vai gerar uma senha aleatoria para o usuário root, que podemos pegar depois com o comando docker container log img, mysql= imagem do container), caso o container ja exista esse comando da erro, e basta executar: <b>docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=true mysql </b></small>
+	</p>
+</body>
+</html>

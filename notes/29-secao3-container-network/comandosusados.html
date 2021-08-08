@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>27 Secao 3</title>
+</head>
+<body>
+
+	<h1>
+		Trabalhando com networking nos containers
+	</h1>
+
+	<hr></hr>
+	<h2>
+		Comandos utilizados
+	</h2>
+
+	<p>
+		<b>docker network ls</b>
+		<small>(lista todas as networks criadas)</small>
+	</p>
+
+	<p>
+		<b>docker network inspect</b>
+		<small>(listar infromações de todas as networks criadas)</small>
+	</p>
+
+	<p>
+		<b>docker network create --driver</b>
+		<small>(Cria uma network, tem opção de informar o driver)</small>
+		<br>
+		<b>
+			Tipode de Drivers, ao criar um network sem especificar o tipo ele cria por padrão o bridge (ip padrão: 172.17.0.2/16)
+		</b>
+		<ul>
+			<li>bridge - ponte</li>
+			<li>host</li>
+			<li>null</li>
+		</ul>
+	</p>
+
+	<p>
+		<b>docker network connect</b>
+		<small>(conectar um container a uma network)</small>
+	</p>
+
+	<p>
+		<b>docker network disconnect</b>
+		<small>(desconectar um container a uma network)</small>
+	</p>
+
+	<p>
+		<b>docker network create --help</b>
+		<small>(Exibi todas as opções possiveis ao criar uma network)</small>
+	</p>
+	<hr>
+
+	<h3>
+		Criando networks
+	</h3>
+	<p>
+		<b>docker network create my_app_network</b>
+		<small>(Cria um network chamada my_app_network)</small>
+	</p>
+
+	<p>
+		<b>docker container run -d --name new_nginx --network my_app_network nginx </b>
+		<small>(Cria um container chamado new_nginx e colocar ele na network chamada my_app_network)</small>
+	</p>
+
+	<p>
+		<b>docker network connect [networkId] [containerId]  </b>
+		<small>(connecta um container em uma network)</small>
+	</p>
+
+	<p>
+		<b>docker network disconnect [networkId] [containerId]  </b>
+		<small>(disconnecta um container em uma network)</small>
+	</p>
+
+	<img src="../27-secao3-container-network/network-docker.png">
+
+</body>
+</html>

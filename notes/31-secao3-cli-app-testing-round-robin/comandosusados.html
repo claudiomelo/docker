@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>27 Secao 3</title>
+</head>
+<body>
+
+	<h1>
+		Trabalhando com networking dns nos containers (como os container encontram um ao outro) e usando DNS Round Robin, balanciamento com 2 containers
+	</h1>
+
+	<hr></hr>
+	<h2>
+		DNS round Robin
+	</h2>
+
+	<p>
+		<b>docker network ls</b>
+		<small>(lista todas as networks criadas)</small>
+	</p>
+
+	
+	<hr>
+
+	<h3>
+		Executados na aula
+	</h3>
+	<p>
+		<b>docker container run -d --network my_app_network --network-alias search elasticsearch:2</b>
+		<small>(criar dois containers com imagem do elastic search versao 2)</small>
+	</p>
+
+	<p>
+		<b>docker container run --rm --network my_app_network alpine nslookup search</b>
+		<small>(criar um container com imagem do linux alpine e roda um nslookup no network alias "search" que foi criado)</small>
+	</p>
+	
+	<p>
+		<b>docker container run --rm --network my_app_network centos curl -s search:9200</b>
+		<small>(criar um container com imagem do linux centos e roda um curl no network alias "search" que foi criado)</small>
+	</p>
+
+</body>
+</html>

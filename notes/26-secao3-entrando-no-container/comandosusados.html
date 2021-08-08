@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>26 Secao 3</title>
+</head>
+<body>
+
+	<h1>
+		Entrar dentro de containers para executar comandos
+	</h1>
+
+	<hr></hr>
+	<h2>
+		Comandos utilizados
+	</h2>
+
+	<p>
+		<b>docker pull imageName</b>
+		<small>(Faz um pull na imagem informada no dockerhub, similar ao git pull no git)</small>
+	</p>
+
+	<p>
+		<b>docker image ls</b>
+		<small>(Exibe lista de images que baixei)</small>
+	</p>
+
+	<p>
+		<b>docker container run -it</b>
+		<small>(Inicia um novo container interativamente)</small>
+	</p>
+
+	<p>
+		<b>docker container run exec -it</b>
+		<small>(Executa comandos adicionais em um container)</small>
+	</p>
+
+	<p>
+		<b>docker container start -ai containerName bash</b>
+		<small>(Inicia um container e entrar no terminal dele)</small>
+	</p>
+
+	<p>
+		<b>docker container exec -it containerName bash</b>
+		<small>(Entrar no bash de um container que está em execução para fazer algo nele, ao sair digitanto exit o container não é desligado)</small>
+	</p>
+
+	<hr>
+
+	<h3>
+		Criando os 3 containers
+	</h3>
+	<p>
+		<b>docker container run -it --name nginx nginx bash</b>
+		<small>(Iniciar um container interativo e entra no bash do container para que possamos rodas comandos dentro do container criado</small>
+	</p>
+
+	<p>
+		<b>docker container run -it --name ubuntu ubuntu</b>
+		<small>(Iniciando um container com ubuntu, como ubuntu tem o bash como padrão não preciso espeficicar ele no fim do comando, posso então instalar o que quiser na minha imagem do ubuntu, e quando der "exit" e ele parar o container, se eu dar um start nele ele vai ter o que instalei</small>
+	</p>
+
+</body>
+</html>

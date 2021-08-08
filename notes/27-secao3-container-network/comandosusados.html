@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>27 Secao 3</title>
+</head>
+<body>
+
+	<h1>
+		Trabalhando com networking nos containers
+	</h1>
+
+	<hr></hr>
+	<h2>
+		Comandos utilizados
+	</h2>
+
+	<p>
+		<b>docker container run -p</b>
+		<small>(especifica em qual porta vai rodar -p)</small>
+	</p>
+
+	<p>
+		<b>docker container port (containerName)</b>
+		<small>(verificar a porta de um container)</small>
+	</p>
+
+	<p>
+		<b>docker container inspect --format '{{ .NetworkSettings.IPAddress }}' (containerName)</b>
+		<small>(Eibir informações do container formatado)</small>
+	</p>
+
+	<hr>
+
+	<h3>
+		Criando os 3 containers
+	</h3>
+	<p>
+		<b>docker container run -it --name nginx nginx bash</b>
+		<small>(Iniciar um container interativo e entra no bash do container para que possamos rodas comandos dentro do container criado</small>
+	</p>
+
+	<img src="network-docker.png">
+
+</body>
+</html>
